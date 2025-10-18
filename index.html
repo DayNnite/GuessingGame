@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- AUTHOR METATAG (required) -->
+  <meta name="author" content="Sam G">
+  <title>Guessing Game</title>
+
+</head>
+<body>
+  <h1>Guessing Game</h1>
+
+  <div id= "card">
+  <p id="demo"></p>
+ </div>
+
+  <script>
+    // your JS goes here
+   randomNumber = Math.floor(Math.random() * 10) + 1;
+let guess;
+let guessCount = 0;
+
+for (let i = 0; i < 10; i++) {
+  guess = prompt("Guess a Number between 1 and 10.");
+
+  if (guess == randomNumber) { 
+    alert(`You guessed it in ${guessCount} guesses!`);
+    break;
+  } else if (guess < randomNumber) {
+
+    alert("Your guess was too low, guess again.");
+  } else if (guess > randomNumber) {
+
+    alert("Your guess was too high, guess again.");
+  }
+}
+
+console.log(randomNumber);
+
+  </script>
+</body>
+</html>
